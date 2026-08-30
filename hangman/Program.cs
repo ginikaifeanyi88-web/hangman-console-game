@@ -10,13 +10,23 @@ namespace hangman
     {
         private static void Main(string[] args)
         {
-
-            WordGenerator myWordGenerator = new WordGenerator();
-            string word = myWordGenerator.GetWord(PartOfSpeech.noun);
-            int lives = 6;
-            List<char> selectedLetters = new List<char>();
-            string guessedLetters = "";
-            playHangman(word, lives, selectedLetters, guessedLetters);
+            while (true) { 
+                WordGenerator myWordGenerator = new WordGenerator();
+                string word = myWordGenerator.GetWord(PartOfSpeech.noun);
+                int lives = 6;
+                string playAgain = "n";
+                List<char> selectedLetters = new List<char>();
+                string guessedLetters = "";
+                playHangman(word, lives, selectedLetters, guessedLetters);
+                Console.WriteLine("Play again? (Type any key to contnue and 'n' to stop)");
+                playAgain = Console.ReadLine();
+                if (playAgain == "n") {
+                    break;
+                } else
+                {
+                    
+                }
+            }
         }
 
         // Main game logic
