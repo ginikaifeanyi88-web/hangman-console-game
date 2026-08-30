@@ -1,7 +1,7 @@
 ﻿// Random word generator external library
 using CrypticWizard.RandomWordGenerator;
 using System.Text.RegularExpressions;
-using static CrypticWizard.RandomWordGenerator.WordGenerator; //for brevity, not required
+using static CrypticWizard.RandomWordGenerator.WordGenerator; 
 
 // Main program namespace
 namespace hangman
